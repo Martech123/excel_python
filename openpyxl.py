@@ -1,7 +1,9 @@
-import xlrd
-import xlwt
-from xlutils.copy import copy
-
+#import xlrd
+#import xlwt
+#from xlutils.copy import copy
+import openpyxl
+wb = openpyxl.load_workbook("ATEST.xlsx")
+sheet = wb.["ATEST"]
 data = xlrd.open_workbook("ATEST.xlsx")
 table = data.sheet_by_name("ATEST")
 write_data = copy(data)
